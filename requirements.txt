@@ -14,8 +14,7 @@ tensorflow==2.9.1
 tensorflow-gpu==2.9.1
 keras==2.9.0
 keras-preprocessing==1.1.2
-en_core_web_sm@https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
-
+en-core-web-sm==2.2.0
 
 
 
