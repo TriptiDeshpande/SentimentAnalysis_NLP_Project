@@ -7,7 +7,7 @@
 import streamlit as st
 import spacy
 from spacytextblob.spacytextblob import SpacyTextBlob
-import en_core_web_lg
+import en_core_web_sm
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded',page_icon="smiley")
 st.title('Text Sentiment Analysis')
@@ -17,7 +17,7 @@ side = st.sidebar.selectbox("Select an option below", ("Sentiment", "Name Entity
 Text = st.text_input("Enter the sentence")
 
 def sentiment(text):
-    nlp = spacy.load('en_core_web_lg')
+    nlp = spacy.load('en_core_web_sm')
     nlp.add_pipe('spacytextblob')
     doc = nlp(text)
     if doc._.polarity<0:
