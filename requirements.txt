@@ -14,9 +14,7 @@ tensorflow==2.9.1
 tensorflow-gpu==2.9.1
 keras==2.9.0
 keras-preprocessing==1.1.2
-en-core-web-lg==3.3.0                  
-en-core-web-sm==3.3.0                  
-     
+
 
 
 
