@@ -7,7 +7,7 @@
 import streamlit as st
 import spacy
 from spacytextblob.spacytextblob import SpacyTextBlob
-import en_core_web_sm
+
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded',page_icon="smiley")
 st.title('Text Sentiment Analysis')
