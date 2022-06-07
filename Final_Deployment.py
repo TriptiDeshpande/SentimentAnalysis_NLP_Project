@@ -17,7 +17,7 @@ side = st.sidebar.selectbox("Select an option below", ("Sentiment", "Name Entity
 Text = st.text_input("Enter the sentence")
 
 def sentiment(text):
-    nlp = spacy.load('en_core_web_sm')
+    nlp = en_core_web_sm.load()
     nlp.add_pipe('spacytextblob')
     doc = nlp(text)
     if doc._.polarity<0:
