@@ -30,11 +30,9 @@ def sentiment(text):
     #doc = nlp(sentence)
     #ents = [(e.text, e.label_) for e in doc.ents]
    # return ents
-def run():
-    if side == "Sentiment":
-        st.write(sentiment(Text))    
-if __name__ == '__main__':
-    run()
+#def run():
+    #if side == "Sentiment":
+st.write(sentiment(Text))    
 
 
 # In[ ]:
