@@ -12,7 +12,7 @@ from textblob.np_extractors import ConllExtractor
 st.set_page_config(layout='wide', initial_sidebar_state='expanded',page_icon="smiley")
 st.title('Text Sentiment Analysis')
 
-st.markdown('Type a sentence in the below text box and choose the desired option in the adjacent menu.')
+st.markdown('Type a sentence in the below text box and press enter to get the sentiment value')
 #side = st.sidebar.selectbox("Select an option below", ("Sentiment", "Name Entity Recognizer"))
 Text = st.text_input("Enter the sentence")
 
