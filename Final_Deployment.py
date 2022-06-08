@@ -6,8 +6,8 @@
 
 import streamlit as st
 import spacy
-from spacytextblob.spacytextblob import SpacyTextBlob
-import en_core_web_sm
+from textblob import TextBlob
+from textblob.np_extractors import ConllExtractor
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded',page_icon="smiley")
 st.title('Text Sentiment Analysis')
@@ -17,15 +17,13 @@ side = st.sidebar.selectbox("Select an option below", ("Sentiment", "Name Entity
 Text = st.text_input("Enter the sentence")
 
 def sentiment(text):
-    nlp = spacy.load('en_core_web_sm')
-    nlp.add_pipe('spacytextblob')
-    doc = nlp(text)
-    if doc._.polarity<0:
-        return ("Negative with a score of : ", doc._.polarity)
-    elif doc._.polarity==0:
-        return "Waiting......"
+    analysis = TextBlob(text)
+    if analysis.sentiment.polarity < 0:
+        return ("Negative with a score of : ", analysis.sentiment.polarity)
+    elif analysis.sentiment.polarity==0:
+        return " Waiting ..... "
     else:
-        return ("Positive with a score of : ", doc._.polarity)
+        return ("Positive with a score of : ", analysis.sentiment.polarity)
 
 def ner(sentence):
     nlp = spacy.load("en_core_web_sm")
