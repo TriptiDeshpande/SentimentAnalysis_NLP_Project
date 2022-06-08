@@ -32,6 +32,11 @@ def sentiment(text):
    # return ents
 #def run():
     #if side == "Sentiment":
+        #st.write(sentiment(Text))    
+    #if side == "Name Entity Recognizer":
+       # st.write(ner(Text))
+#if __name__ == '__main__':
+    #run()
 st.write(sentiment(Text))    
 
 
